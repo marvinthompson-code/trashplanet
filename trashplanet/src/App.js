@@ -2,8 +2,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import React, { useEffect } from "react";
 import "./App.css";
+import firebase from "./firebase";
 import { useSelector, useDispatch } from "react-redux";
 import { Route, Switch, Redirect } from "react-router-dom";
+import { updateUser } from "./features/user/userSlice";
 
 // components
 import Footer from "./features/Footer/Footer";
@@ -27,7 +29,11 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/about">
+        <Route exact path="/shop"></Route>
+        <Route exact path="/shopAll"></Route>
+        <Route exact path="/accessories"></Route>
+        <Route exact path="/misc"></Route>
+        <Route exact path="/media">
           <About />
         </Route>
       </Switch>
