@@ -9,6 +9,7 @@ const {
 
 items.post("/addItem", createItem);
 items.get("/", getAllItems);
+items.get("/:category")
 items.get("/:id", getSingleItem);
 items.delete("/:id", deleteSingleItem);
 

@@ -12,6 +12,7 @@ import Footer from "./features/Footer/Footer";
 import Nav from "./features/Nav/Nav";
 import Home from "./features/Home/Home";
 import About from "./features/About/About";
+import Clothing from "./features/Shop/Clothing";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,7 +30,9 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/shop"></Route>
+        <Route exact path="/shop">
+          <Clothing />
+        </Route>
         <Route exact path="/shopAll"></Route>
         <Route exact path="/accessories"></Route>
         <Route exact path="/misc"></Route>

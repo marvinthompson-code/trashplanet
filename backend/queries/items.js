@@ -41,6 +41,25 @@ const getAllItems = async (req, res, next) => {
   }
 };
 
+const getAllItemsByCategory = async (req, res, next) => {
+  try {
+    let { category } = req.body
+    let items = await db.any("SELECT * FROM items WHERE category = $1 RETURNING *", [ category ])
+    res.status(200).json({
+      status: "Success",
+      message: "Retrieved all items",
+      body: {
+        items
+      }
+    })
+  } catch (error) {
+    res.status(404).json({
+      status: "Unsuccessful",
+      message: "Could not get items",
+    });
+  }
+}
+
 const deleteSingleItem = async (req, res, next) => {
   try {
     let { id } = req.body;
@@ -83,4 +102,4 @@ const getSingleItem = async (req, res, next) => {
   }
 };
 
-module.exports = { createItem, getAllItems, deleteSingleItem, getSingleItem };
+module.exports = { createItem, getAllItems, deleteSingleItem, getSingleItem, getAllItemsByCategory };

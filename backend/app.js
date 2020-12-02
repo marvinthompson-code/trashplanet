@@ -16,14 +16,14 @@ const itemsRouter = require('./routes/items');
 app.use("/users", usersRouter);
 app.use("/items", itemsRouter)
 
-app.use((err, req, res, next) => {
-    console.log(err);
-    if (err.status) {
-      res.status(err.status).json(err);
-    } else {
-      res.status(500).json(err);
-    }
-  });
+// app.use((err, req, res, next) => {
+//     console.log(err);
+//     if (err.status) {
+//       res.status(err.status).json(err);
+//     } else {
+//       res.status(500).json(err);
+//     }
+//   });
   
   app.listen(PORT, () => {
     console.log("Listening on port ", PORT);
