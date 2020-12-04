@@ -13,7 +13,7 @@ import Nav from "./features/Nav/Nav";
 import Home from "./features/Home/Home";
 import About from "./features/About/About";
 import Clothing from "./features/Shop/Clothing";
-
+import AllItems from "./features/shopAll/AllItems";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -33,7 +33,9 @@ function App() {
         <Route exact path="/shop">
           <Clothing />
         </Route>
-        <Route exact path="/shopAll"></Route>
+        <Route exact path="/shopAll">
+          <AllItems />
+        </Route>
         <Route exact path="/accessories"></Route>
         <Route exact path="/misc"></Route>
         <Route exact path="/media">
