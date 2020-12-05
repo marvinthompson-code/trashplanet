@@ -1,7 +1,10 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
+import shoppingCart from "../../css/icons/shopping-cart.png";
 
 const Nav = () => {
+  const history = useHistory();
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <NavLink className="navbar-brand" exact to="/">
@@ -25,7 +28,7 @@ const Nav = () => {
               HOME<span className="sr-only">(current)</span>
             </NavLink>
           </li>
-          
+
           <li className="nav-item dropdown">
             <a
               className="nav-link dropdown-toggle"
@@ -37,7 +40,10 @@ const Nav = () => {
             >
               SHOP
             </a>
-            <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <div
+              className="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
               <NavLink className="dropdown-item" exact to="/shop">
                 CLOTHING
               </NavLink>
@@ -62,6 +68,12 @@ const Nav = () => {
               MEDIA
             </NavLink>
           </li>
+          {/* <li className="nav-item shoppingCart">
+
+          <img src={shoppingCart}>
+
+          </img>
+          </li> */}
         </ul>
       </div>
     </nav>

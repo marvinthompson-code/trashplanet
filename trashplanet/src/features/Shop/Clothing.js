@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { apiURL } from "../../util/apiURL";
 
 const Clothing = () => {
-  const history = useHistory();
   const API = apiURL();
   const [clothes, setClothes] = useState([]);
 

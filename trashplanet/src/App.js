@@ -14,6 +14,10 @@ import Home from "./features/Home/Home";
 import About from "./features/About/About";
 import Clothing from "./features/Shop/Clothing";
 import AllItems from "./features/shopAll/AllItems";
+import Accessories from "./features/Accessories/Accessories";
+import Media from "./features/Media/Media";
+import Misc from "./features/Misc/Misc";
+
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -36,11 +40,21 @@ function App() {
         <Route exact path="/shopAll">
           <AllItems />
         </Route>
-        <Route exact path="/accessories"></Route>
-        <Route exact path="/misc"></Route>
+        <Route exact path="/accessories">
+          <Accessories />
+        </Route>
+        <Route exact path="/misc">
+          <Misc />
+        </Route>
         <Route exact path="/media">
+          <Media />
+        </Route>
+        <Route exact path="/about">
           <About />
         </Route>
+        <Route exact path="/cart"></Route>
+        <Route exact path="/checkout"></Route>
+        <Route exact path="/thankYou"></Route>
       </Switch>
       <Footer />
     </div>
