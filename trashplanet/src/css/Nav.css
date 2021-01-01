@@ -1,0 +1,52 @@
+@font-face {
+    src: url("../css/fonts/OldStandardTT-Bold.ttf");
+    font-family: OldStandardBold;
+}
+@font-face {
+    src: url("../css/fonts/OldStandardTT-Regular.ttf");
+    font-family: OldStandardRegular;
+}
+@font-face {
+    src: url("../css/fonts/Orbitron-Black.ttf");
+    font-family: OrbitronBlk;
+}
+@font-face {
+    src: url("../css/fonts/Orbitron-Bold.ttf");
+    font-family: OrbitronBold;
+}
+@font-face {
+    src: url("../css/fonts/Orbitron-ExtraBold.ttf");
+    font-family: OrbitronExtraBold;
+}
+@font-face {
+    src: url("../css/fonts/Orbitron-Medium.ttf");
+    font-family: OrbitronMedium;
+}
+@font-face {
+    src: url("../css/fonts/Orbitron-Regular.ttf");
+    font-family: OrbitronRegular;
+}
+@font-face {
+    src: url("../css/fonts/Orbitron-SemiBold.ttf");
+    font-family: OrbitronSemiBold;
+}
+@font-face {
+    src: url("../css/fonts/Orbitron-VariableFont_wght.ttf");
+    font-family: OrbitronVariable;
+}
+@font-face {
+    src: url("../css/fonts/ProzaLibre-Regular.ttf");
+    font-family: ProzaReg;
+}
+
+@font-face {
+    src: url("../css/fonts/ProzaLibre-SemiBold.ttf");
+    font-family: ProzaSemiBold;
+}
+.brandTitle {
+    font-size: xx-large;
+}
+
+.navLink {
+    font-family: ProzaReg;
+}

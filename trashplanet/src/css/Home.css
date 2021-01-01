@@ -1,0 +1,45 @@
+:root {
+    --darkBlack: #080708;
+}
+
+@font-face {
+  src: url("../css/fonts/ProzaLibre-SemiBold.ttf");
+  font-family: ProzaSemiBold;
+}
+
+@font-face {
+  src: url("../css/fonts/ProzaLibre-Medium.ttf");
+  font-family: ProzaSemiMedium;
+}
+@font-face {
+  src: url("../css/fonts/ProzaLibre-Regular.ttf");
+  font-family: ProzaReg;
+}
+
+.homeSocial {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  object-fit: fill;
+}
+
+.socialDiv {
+  text-align: center;
+  align-items: center;
+  border: 1px white solid;
+  padding: unset;
+}
+
+.bannerTitle {
+  font-family: ProzaSemiMedium;
+  color: white;
+}
+
+.bannerText {
+    font-family: ProzaReg;
+    color: white;
+}
+
+.jumboHome {
+    background-color: var(--darkBlack);
+}
