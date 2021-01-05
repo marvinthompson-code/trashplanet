@@ -1,3 +1,11 @@
+:root {
+    --darkBlack: #080708;
+    --russianViolet: #0B012C;
+    --persianIndigo: #3A097D;
+    --russianLight: #47014b;
+    --midnight: #7A0167;
+}
+
 @font-face {
     src: url("../css/fonts/OldStandardTT-Bold.ttf");
     font-family: OldStandardBold;
@@ -45,8 +53,21 @@
 }
 .brandTitle {
     font-size: xx-large;
+    font-family: ProzaSemiBold;
+    color: white !important;
 }
 
 .navLink {
     font-family: ProzaReg;
+    color: white !important;
+}
+
+.navbar {
+    background-color: var(--darkBlack) !important;
+    box-shadow: 2px 5px 15px black;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    /* position: absolute; */
+    border-bottom: var(--midnight) 2px solid;
 }

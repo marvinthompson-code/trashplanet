@@ -76,6 +76,11 @@ const Nav = () => {
               MEDIA
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink className="nav-link navLink" exact to="/contact">
+              CONTACT
+            </NavLink>
+          </li>
           {/* <li className="nav-item shoppingCart">
 
           <img src={shoppingCart}>

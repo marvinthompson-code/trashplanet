@@ -16,17 +16,15 @@ import social10 from "../../css/images/social10.jpeg";
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className="jumbotron text-center jumboHome">
+    <div className="container bigContainer">
+      <div className="jumbotron text-center jumboHome jumboCollection">
         <h1 className="display-4 bannerTitle">EXAMPLE BANNER</h1>
-        <p className="lead bannerText">
-          This is an example banner, with some filler text for you.
+        <p className="bannerText">
+          We can use this to demo off some kind of featured thingy here.
         </p>
-        <hr className="my-4"></hr>
-        <p className="bannerText">We can use this to demo off some kind of featured thingy here.</p>
         <p className="lead">
           <NavLink
-            className="btn btn-primary btn-lg"
+            className="btn btn-primary btn-lg bannerButton"
             exact
             to="/featured"
             role="button"
@@ -40,10 +38,12 @@ const Home = () => {
         <h1 className="display-4 bannerTitle">EXAMPLE BANNER 2</h1>
         <p className="lead bannerText">Maybe for a specific clothing item?</p>
         <hr className="my-4"></hr>
-        <p className="bannerText">We can use this to demo off some kind of featured thingy here.</p>
+        <p className="bannerText">
+          We can use this to demo off some kind of featured thingy here.
+        </p>
         <p className="lead">
           <NavLink
-            className="btn btn-primary btn-lg"
+            className="btn btn-primary btn-lg bannerButton"
             exact
             to="/shop"
             role="button"
