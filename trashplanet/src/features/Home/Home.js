@@ -53,7 +53,7 @@ const Home = () => {
         </p>
       </div>
       <br></br>
-      <div className="jumbotron jumboHome">
+      <div className="jumbotron jumboHome feedJumbo">
         <h1 className="display-4 text-center bannerTitle">SHOP THE FEED</h1>
         <hr className="my-4"></hr>
         <div className="row">

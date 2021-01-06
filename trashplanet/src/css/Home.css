@@ -1,9 +1,11 @@
 :root {
     --darkBlack: #080708;
+    --darkGrey2: #0f0f0f;
     --russianViolet: #0B012C;
     --persianIndigo: #3A097D;
     --russianLight: #47014b;
     --midnight: #7A0167;
+    --indigoGReen: #70FFC4;
 }
 
 @font-face {
@@ -32,21 +34,43 @@
   border-color: var(--midnight);
   cursor: pointer;
   opacity: 1;
+  /* box-shadow: */
+  /* 0 0 20px 10px #fff,  inner white */
+  /* 0 0 50px 25px #f0f, middle magenta */
+  /* 0 0 70px 45px #0ff; outer cyan */
 }
 
 .socialDiv {
   text-align: center;
   align-items: center;
-  border: 1px var(--midnight) solid;
+  border: 2px var(--midnight) solid;
   padding: unset;
   transition: 2s;
   opacity: 0.65;
+  /* background: repeating-linear-gradient(
+  45deg,
+  #222,
+  #222 10px,
+  #333 10px,
+  #333 20px
+); */
+}
+
+.feedJumbo {
+  background: repeating-linear-gradient(
+  -45deg,
+  var(--darkBlack),
+  var(--darkBlack) 10px,
+  var(--darkGrey2) 10px,
+  var(--darkGrey2) 20px
+);
 }
 
 
 .bannerTitle {
   font-family: ProzaSemiMedium;
   color: white;
+  text-shadow: 2px 2px 2px  var(--midnight);
 }
 
 .bannerText {
@@ -79,6 +103,12 @@
     border-color: var(--persianIndigo) !important;
     font-family: ProzaReg;
     box-shadow: 3px 7px 15px black;
+    transition: 1.5s;
+}
+
+.bannerButton:hover {
+  background-color: var(--midnight) !important;
+  border-color: var(--midnight) !important;
 }
 
 .bigContainer {
