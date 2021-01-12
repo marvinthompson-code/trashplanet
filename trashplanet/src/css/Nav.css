@@ -1,82 +1,80 @@
 :root {
-    --darkBlack: #080708;
-    --russianViolet: #0B012C;
-    --persianIndigo: #3A097D;
-    --russianLight: #47014b;
-    --midnight: #7A0167;
-    --photoNegativeBlue: #83CCE8;
+  --darkBlack: #080708;
+  --russianViolet: #0b012c;
+  --persianIndigo: #3a097d;
+  --russianLight: #47014b;
+  --midnight: #7a0167;
+  --photoNegativeBlue: #83cce8;
 }
 
 @font-face {
-    src: url("../css/fonts/OldStandardTT-Bold.ttf");
-    font-family: OldStandardBold;
+  src: url("../css/fonts/OldStandardTT-Bold.ttf");
+  font-family: OldStandardBold;
 }
 @font-face {
-    src: url("../css/fonts/OldStandardTT-Regular.ttf");
-    font-family: OldStandardRegular;
+  src: url("../css/fonts/OldStandardTT-Regular.ttf");
+  font-family: OldStandardRegular;
 }
 @font-face {
-    src: url("../css/fonts/Orbitron-Black.ttf");
-    font-family: OrbitronBlk;
+  src: url("../css/fonts/Orbitron-Black.ttf");
+  font-family: OrbitronBlk;
 }
 @font-face {
-    src: url("../css/fonts/Orbitron-Bold.ttf");
-    font-family: OrbitronBold;
+  src: url("../css/fonts/Orbitron-Bold.ttf");
+  font-family: OrbitronBold;
 }
 @font-face {
-    src: url("../css/fonts/Orbitron-ExtraBold.ttf");
-    font-family: OrbitronExtraBold;
+  src: url("../css/fonts/Orbitron-ExtraBold.ttf");
+  font-family: OrbitronExtraBold;
 }
 @font-face {
-    src: url("../css/fonts/Orbitron-Medium.ttf");
-    font-family: OrbitronMedium;
+  src: url("../css/fonts/Orbitron-Medium.ttf");
+  font-family: OrbitronMedium;
 }
 @font-face {
-    src: url("../css/fonts/Orbitron-Regular.ttf");
-    font-family: OrbitronRegular;
+  src: url("../css/fonts/Orbitron-Regular.ttf");
+  font-family: OrbitronRegular;
 }
 @font-face {
-    src: url("../css/fonts/Orbitron-SemiBold.ttf");
-    font-family: OrbitronSemiBold;
+  src: url("../css/fonts/Orbitron-SemiBold.ttf");
+  font-family: OrbitronSemiBold;
 }
 @font-face {
-    src: url("../css/fonts/Orbitron-VariableFont_wght.ttf");
-    font-family: OrbitronVariable;
+  src: url("../css/fonts/Orbitron-VariableFont_wght.ttf");
+  font-family: OrbitronVariable;
 }
 @font-face {
-    src: url("../css/fonts/ProzaLibre-Regular.ttf");
-    font-family: ProzaReg;
+  src: url("../css/fonts/ProzaLibre-Regular.ttf");
+  font-family: ProzaReg;
 }
 
 @font-face {
-    src: url("../css/fonts/ProzaLibre-SemiBold.ttf");
-    font-family: ProzaSemiBold;
+  src: url("../css/fonts/ProzaLibre-SemiBold.ttf");
+  font-family: ProzaSemiBold;
 }
 .brandTitle {
-    font-size: xx-large;
-    font-family: ProzaSemiBold;
-    color: white !important;
+  font-size: xx-large;
+  font-family: ProzaSemiBold;
+  color: white !important;
 }
 
 .navLink {
-    font-family: ProzaReg;
-    color: white !important;
-    transition: 1.5s;
+  font-family: ProzaReg;
+  color: white !important;
+  transition: 1.5s;
 }
 
 .navLink:hover {
-    color: var(--negativeRed) !important;
+  color: var(--negativeRed) !important;
 }
 
 .navbar {
-    background-color: var(--darkBlack) !important;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    /* position: absolute; */
-    
+  background-color: var(--darkBlack) !important;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 .dropdownParent {
-    background-color: black;
+  background-color: black;
 }

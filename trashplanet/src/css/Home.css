@@ -6,9 +6,9 @@
   --russianLight: #47014b;
   --midnight: #7a0167;
   --indigoGReen: #70ffc4;
-  --photoNegativeBlue: #83CCE8;
-  --negativeRed: #C64343;
-  --marioJudah: #92323C
+  --photoNegativeBlue: #83cce8;
+  --negativeRed: #c64343;
+  --marioJudah: #92323c;
 }
 
 @font-face {
@@ -31,6 +31,9 @@
   max-width: 100%;
   object-fit: fill;
   transition: 2s;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px white solid;
 }
 
 .socialDiv:hover {
@@ -39,11 +42,7 @@
   opacity: 1;
   transform: scale(1.015);
   z-index: 1.5;
-  filter: invert(0)
-  /* box-shadow: */
-  /* 0 0 20px 10px #fff,  inner white */
-  /* 0 0 50px 25px #f0f, middle magenta */
-  /* 0 0 70px 45px #0ff; outer cyan */
+  filter: invert(0);
 }
 
 .socialDiv {
@@ -52,25 +51,18 @@
   padding: unset;
   transition: 2s;
   transition: 1s;
-  opacity: 0.50;
-  filter: invert(4);  
-  /* background: repeating-linear-gradient(
-  45deg,
-  #222,
-  #222 10px,
-  #333 10px,
-  #333 20px
-); */
+  opacity: 0.5;
+  filter: invert(4);
 }
-
-
 
 .bannerTitle {
   font-family: ProzaSemiMedium;
   color: white;
-  
 }
 
+.shopTheFeed {
+  animation: glitch1 2.5s infinite;
+}
 .bannerText {
   font-family: ProzaReg;
   color: white;
@@ -81,7 +73,12 @@
 }
 
 .jumboCollection {
-  background-image: url("../css/images/nikelab_acg.jpg"), linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));
+  background-image: url("../css/images/nikelab_acg.jpg"),
+    linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 19, 93, 0.73)
+    );
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -93,12 +90,17 @@
   border-bottom: unset;
   height: 100%;
   transition: 1s;
-  opacity: 0.60;
-  filter: invert(4)  
+  opacity: 0.6;
+  filter: invert(4);
 }
 
 .jumbo2 {
-  background-image: url("../css/images/tech1.jpg"), linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73));
+  background-image: url("../css/images/tech1.jpg"),
+    linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 19, 93, 0.73)
+    );
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,18 +111,18 @@
   border-bottom: unset;
   height: 100%;
   transition: 1s;
-  opacity: 0.60;
-  filter: invert(4)  
+  opacity: 0.6;
+  filter: invert(4);
 }
 
 .jumbo2:hover {
   opacity: 1;
-  filter: invert(0) grayscale(0)
+  filter: invert(0) grayscale(0);
 }
 
 .jumboCollection:hover {
   opacity: 1;
-  filter: invert(0) grayscale(0)
+  filter: invert(0) grayscale(0);
 }
 
 .bannerButton {
@@ -128,7 +130,6 @@
   border-color: white !important;
   font-family: ProzaReg;
   transition: 1.5s;
-  
 }
 
 .bannerButton:hover {
@@ -139,4 +140,170 @@
 .bigContainer {
   border-top: unset;
   padding: unset;
+}
+
+
+@keyframes glitch1 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes glitch3 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
 }

@@ -21,9 +21,9 @@ const Clothing = () => {
     };
   }, []);
   return (
-    <div className="container">
-      <div className="jumbotron jumboCollection text-center">
-        <h1 className="display-4 bannerTitle">EXAMPLE BANNER</h1>
+    <div className="bigContainer">
+      <div className="jumbotron text-left jumboHome jumboCollection">
+        <h1 className="display-4 bannerTitle">WINTER COLLECTION</h1>
 
         <p className="bannerText">We can use this to demo off some kind of featured thingy here.</p>
         <p className="lead">
@@ -37,10 +37,11 @@ const Clothing = () => {
           </NavLink>
         </p>
       </div>
-      <div class="jumbotron jumbotron-fluid">
+      <br></br>
+      <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
-          <h1 class="display-4">All Clothing</h1>
-          <p class="lead">
+          <h1 class="display-4 bannerTitle">All Clothing</h1>
+          <p class="lead bannerText">
             This is a modified jumbotron that occupies the entire horizontal
             space of its parent.
           </p>
