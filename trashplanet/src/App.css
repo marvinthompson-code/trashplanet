@@ -5,6 +5,7 @@
   --russianLight: #47014b;
   --midnight: #7a0167;
   --newRed: #9a031e;
+  --darkGrey2: #0f0f0f;
 }
 
 
@@ -19,8 +20,8 @@
   /* background-color: white; */
   background: repeating-linear-gradient(
     45deg,
-    var(--russianLight),
-    var(--russianLight) 10px,
+    var(--darkGrey2),
+    var(--darkGrey2) 10px,
     var(--darkBlack) 10px,
     var(--darkBlack) 20px
   );

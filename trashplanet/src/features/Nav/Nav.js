@@ -49,7 +49,7 @@ const Nav = () => {
               SHOP
             </a>
             <div
-              className="dropdown-menu"
+              className="dropdown-menu dropdownParent"
               aria-labelledby="navbarDropdownMenuLink"
             >
               <NavLink className="dropdown-item navLink" exact to="/shop">

@@ -16,9 +16,9 @@ import social10 from "../../css/images/social10.jpeg";
 
 const Home = () => {
   return (
-    <div className="container bigContainer">
-      <div className="jumbotron text-center jumboHome jumboCollection">
-        <h1 className="display-4 bannerTitle">EXAMPLE BANNER</h1>
+    <div className="bigContainer">
+      <div className="jumbotron text-left jumboHome jumboCollection">
+        <h1 className="display-4 bannerTitle">WINTER COLLECTION</h1>
         <p className="bannerText">
           We can use this to demo off some kind of featured thingy here.
         </p>
@@ -34,10 +34,8 @@ const Home = () => {
         </p>
       </div>
       <br></br>
-      <div className="jumbotron text-center jumboHome">
+      <div className="jumbotron text-right jumboHome jumbo2">
         <h1 className="display-4 bannerTitle">EXAMPLE BANNER 2</h1>
-        <p className="lead bannerText">Maybe for a specific clothing item?</p>
-        <hr className="my-4"></hr>
         <p className="bannerText">
           We can use this to demo off some kind of featured thingy here.
         </p>

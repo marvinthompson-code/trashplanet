@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { apiURL } from "../../util/apiURL";
+// css
+import "../../css/Clothing.css";
 
 const Clothing = () => {
   const API = apiURL();
@@ -20,16 +22,13 @@ const Clothing = () => {
   }, []);
   return (
     <div className="container">
-      <div className="jumbotron">
-        <h1 className="display-4">EXAMPLE BANNER</h1>
-        <p className="lead">
-          This is an example banner, with some filler text for you.
-        </p>
-        <hr className="my-4"></hr>
-        <p>We can use this to demo off some kind of featured thingy here.</p>
+      <div className="jumbotron jumboCollection text-center">
+        <h1 className="display-4 bannerTitle">EXAMPLE BANNER</h1>
+
+        <p className="bannerText">We can use this to demo off some kind of featured thingy here.</p>
         <p className="lead">
           <NavLink
-            className="btn btn-primary btn-lg"
+            className="btn btn-primary btn-lg bannerButton"
             exact
             to="/featured"
             role="button"

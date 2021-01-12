@@ -4,6 +4,7 @@
     --persianIndigo: #3A097D;
     --russianLight: #47014b;
     --midnight: #7A0167;
+    --photoNegativeBlue: #83CCE8;
 }
 
 @font-face {
@@ -60,14 +61,22 @@
 .navLink {
     font-family: ProzaReg;
     color: white !important;
+    transition: 1.5s;
+}
+
+.navLink:hover {
+    color: var(--negativeRed) !important;
 }
 
 .navbar {
     background-color: var(--darkBlack) !important;
-    box-shadow: 2px 5px 15px black;
     position: fixed;
     width: 100%;
     z-index: 1;
     /* position: absolute; */
-    border-bottom: var(--midnight) 2px solid;
+    
+}
+
+.dropdownParent {
+    background-color: black;
 }
