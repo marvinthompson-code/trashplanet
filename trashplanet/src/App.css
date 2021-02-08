@@ -8,13 +8,11 @@
   --darkGrey2: #0f0f0f;
 }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
 
 .App {
   /* background-color: white; */

@@ -58,6 +58,12 @@
   color: white !important;
 }
 
+@media only screen and (max-with: 600px) {
+  .brandTitle {
+    font-size: 20px !important;
+  }
+}
+
 .navLink {
   font-family: ProzaReg;
   color: white !important;
