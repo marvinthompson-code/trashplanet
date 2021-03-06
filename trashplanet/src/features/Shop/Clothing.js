@@ -17,7 +17,7 @@ const Clothing = () => {
   useEffect(() => {
     const fetchClothing = async (category) => {
       let res = await axios.get(`${API}/items/${category}`);
-      debugger;
+     
     };
   }, []);
   return (

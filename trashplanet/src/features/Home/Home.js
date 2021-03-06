@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux"
+import { setFeedModalImg } from "../Shop/feedModalSlice"
 // css
 import "../../css/Home.css";
 
@@ -20,6 +22,14 @@ import clothingCardCap from "../../css/images/techgirlcard1.png"
 import accessoriesCardCap from "../../css/images/techwearboycard2.jpg"
 
 const Home = () => {
+  const dispatch = useDispatch()
+  const [currentModalImage, setCurrentModalImage] = useState("")
+
+  const handleClick = (e) => {
+   setCurrentModalImage(e.target.src)
+ 
+   console.log(currentModalImage)
+  }
   return (
     <div className="bigContainer">
       <div className="jumbotron text-center jumboHome jumboCollection">
@@ -87,41 +97,41 @@ const Home = () => {
         <h1 className="display-4 text-center bannerTitle shopTheFeed">SHOP THE FEED</h1>
         <hr className="my-4"></hr>
         <div className="row">
-          <div className="col socialDiv">
-            <img src={social1} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter" />
+          <div className="col socialDiv" >
+            <img src={social1} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter" onClick={handleClick}/>
           </div>
           <div className="col socialDiv">
-            <img src={social2} alt={"social"} className={"homeSocial"}   data-toggle="modal" data-target="#exampleModalCenter"/>
+            <img src={social2} alt={"social"} className={"homeSocial"}   data-toggle="modal" data-target="#exampleModalCenter" onClick={handleClick}/>
           </div>
           <div className="col socialDiv">
-            <img src={social3} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter"/>
+            <img src={social3} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter" onClick={handleClick}/>
           </div>
           <div className="col socialDiv">
-            <img src={social4} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter"/>
+            <img src={social4} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter" onClick={handleClick}/>
           </div>
           <div className="col socialDiv">
-            <img src={social5} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter"/>
+            <img src={social5} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter" onClick={handleClick}/>
           </div>
         </div>
         <div className="row">
           <div className="col socialDiv">
-            <img src={social6} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter"/>
+            <img src={social6} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter" onClick={handleClick}/>
           </div>
           <div className="col socialDiv">
-            <img src={social7} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter"/>
+            <img src={social7} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter" onClick={handleClick}/>
           </div>
           <div className="col socialDiv">
-            <img src={social8} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter"/>
+            <img src={social8} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter" onClick={handleClick}/>
           </div>
           <div className="col socialDiv">
-            <img src={social9} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter"/>
+            <img src={social9} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter" onClick={handleClick}/>
           </div>
           <div className="col socialDiv">
-            <img src={social10} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter"/>
+            <img src={social10} alt={"social"} className={"homeSocial"}  data-toggle="modal" data-target="#exampleModalCenter" onClick={handleClick}/>
           </div>
         </div>
       </div>
-      <FeedModal />
+      <FeedModal modalImage={currentModalImage}/>
     </div>
   );
 };

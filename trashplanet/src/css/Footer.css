@@ -1,0 +1,21 @@
+.footer {
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    background-color: var(--darkBlack);
+    justify-content: space-between;
+    position: relative
+}
+
+.footer-item {
+    font-size: large;
+    font-family: ProzaReg;
+    color: white !important;
+    /* vertical-align: baseline;
+    text-align: -webkit-match-parent; */
+    
+}
+
+.liContainer {
+    justify-content: space-between;
+}

@@ -1,3 +1,41 @@
 .feedModal {
     border-radius: 10px;
 }
+
+.modal-content {
+    padding: 5px;
+    border: 1px solid black !important;
+    background-color: var(--darkBlack);
+}
+
+.modal-header {
+    border-bottom: unset !important;
+    margin: auto;
+}
+
+.modal-footer {
+    border-top: unset !important
+}
+.feedModalImg {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  object-fit: fill;
+  transition: 2s;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px black solid !important;
+}
+
+.feedModalImg:hover {
+  border-color: white !important;
+}
+
+.feedModalImgContainer {
+  text-align: center;
+  align-items: center;
+  padding: unset;
+  transition: 2s;
+  transition: 1s;
+  filter: invert(4);
+}
