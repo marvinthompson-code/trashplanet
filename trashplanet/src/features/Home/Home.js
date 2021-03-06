@@ -16,6 +16,8 @@ import social7 from "../../css/images/social7.jpeg";
 import social8 from "../../css/images/social8.jpeg";
 import social9 from "../../css/images/social9.jpeg";
 import social10 from "../../css/images/social10.jpeg";
+import clothingCardCap from "../../css/images/techgirlcard1.png"
+import accessoriesCardCap from "../../css/images/techwearboycard2.jpg"
 
 const Home = () => {
   return (
@@ -37,21 +39,48 @@ const Home = () => {
         </p>
       </div>
       <br></br>
-      <div className="jumbotron text-center jumboHome jumbo2">
-        <h1 className="display-4 bannerTitle">EXAMPLE BANNER 2</h1>
-        <p className="bannerText">
-          We can use this to demo off some kind of featured thingy here.
-        </p>
-        <p className="lead">
-          <NavLink
+  <div className="container">
+  <div className="card-deck row">
+    <div className="cardContainer col">
+  <div className="card">
+    <img className="card-img-top cardTop d-block img-fluid img-responsive " src={clothingCardCap} alt="Card image cap" />
+    <div className="card-body">
+      <h5 className="card-title text-center shopCardTitle">SHOP CLOTHING</h5>
+      <p className="card-text text-center shopCardDescription">New items - updated regularly.</p>
+      <div className="text-center">
+      <NavLink
             className="btn btn-primary btn-lg bannerButton"
             exact
             to="/shop"
             role="button"
-          >
+            >
             Shop Clothing
           </NavLink>
-        </p>
+            </div>
+    </div>
+  </div>
+    </div>
+
+    <div className="cardContainer col">
+  <div className="card">
+    <img className="card-img-top cardTop d-block img-fluid img-responsive " src={accessoriesCardCap} alt="Card image cap" />
+    <div className="card-body">
+      <h5 className="card-title text-center shopCardTitle">SHOP ACCESSORIES</h5>
+      <p className="card-text text-center shopCardDescription">View/Shop Trashplxnet Accesories.</p>
+      <div className="text-center">
+      <NavLink
+            className="btn btn-primary btn-lg bannerButton"
+            exact
+            to="/accessories"
+            role="button"
+            >
+            Shop Accessories
+          </NavLink>
+            </div>
+    </div>
+  </div>
+    </div>
+</div>
       </div>
       <br></br>
       <div className="jumbotron jumboHome feedJumbo">
