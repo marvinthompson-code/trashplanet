@@ -5,6 +5,7 @@
   --russianLight: #47014b;
   --midnight: #7a0167;
   --photoNegativeBlue: #83cce8;
+  --tpYellow: #E1E002;
 }
 
 @font-face {
@@ -64,6 +65,10 @@
   }
 }
 
+.tpLogo {
+  max-height: 100px;
+  max-width: 100px;
+}
 .navLink {
   font-family: ProzaReg;
   color: white !important;
@@ -71,7 +76,7 @@
 }
 
 .navLink:hover {
-  color: var(--negativeRed) !important;
+  color: var(--tpYellow) !important;
 }
 
 .navbar {

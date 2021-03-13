@@ -8,5 +8,5 @@ export const feedModalSlice = createSlice({
   },
 });
 
-export const { setFeedModalImg } = feedModalSlice.actions
-export default feedModalSlice.reducer
+export const { setFeedModalImg } = feedModalSlice.actions;
+export default feedModalSlice.reducer;

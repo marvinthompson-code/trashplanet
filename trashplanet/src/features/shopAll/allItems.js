@@ -12,9 +12,7 @@ const AllItems = () => {
   // pass individual item as a prop to inidividual item card component
   // on click, history.push to item page
 
-  useEffect(() => {
-
-  }, []);
+  useEffect(() => {}, []);
   return (
     <div className="container">
       <div className="jumbotron">

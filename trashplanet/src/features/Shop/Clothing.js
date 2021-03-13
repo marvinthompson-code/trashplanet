@@ -17,30 +17,24 @@ const Clothing = () => {
   useEffect(() => {
     const fetchClothing = async (category) => {
       let res = await axios.get(`${API}/items/${category}`);
-     
     };
   }, []);
+
   return (
     <div className="bigContainer">
-      <div className="jumbotron text-left jumboHome jumboCollection">
-        <h1 className="display-4 bannerTitle">WINTER COLLECTION</h1>
-
-        <p className="bannerText">We can use this to demo off some kind of featured thingy here.</p>
-        <p className="lead">
-          <NavLink
-            className="btn btn-primary btn-lg bannerButton"
-            exact
-            to="/featured"
-            role="button"
-          >
-            View Collection
-          </NavLink>
-        </p>
+      
+      <div class="jumbotron jumbotron-fluid text-center clothingJumbo">
+        <div class="container">
+        <h1 class="display-4 bannerTitle">All Clothing</h1>
+          <p class="lead">
+            This is a modified jumbotron that occupies the entire horizontal
+            space of its parent.
+          </p>
+        </div>
       </div>
-      <br></br>
       <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
-          <h1 class="display-4 bannerTitle">All Clothing</h1>
+          
           <p class="lead bannerText">
             This is a modified jumbotron that occupies the entire horizontal
             space of its parent.

@@ -58,7 +58,7 @@
 }
 
 .card {
-  border-radius: .3rem !important;
+  border-radius: 0.3rem !important;
   border: 1px solid black !important;
   transition: 2s;
   padding: 5px;
@@ -119,20 +119,19 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  margin-top: 5.3%;
+  margin-top: 12%;
   border-bottom: unset;
   height: 100%;
   transition: 1s;
   opacity: 0.6;
   filter: invert(4);
-
   border: 1px white solid;
 }
 
 @media screen and (max-width: 600px) {
   .jumboCollection {
     width: 100%;
-    margin-top: 15%;
+    margin-top: 29%;
   }
 
   .brandTitle {
@@ -141,8 +140,26 @@
 }
 
 @media screen and (max-width: 600px) {
-  .display-4{
+  .display-4 {
     font-size: 2.3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .jumboCollection {
+    margin-top: 9.3%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .jumboCollection {
+    margin-top: 6.5%;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 700px) {
+  .jumboCollection {
+    margin-top: 25.5%;
   }
 }
 
@@ -186,15 +203,14 @@
 }
 
 .bannerButton:hover {
-  background-color: var(--photoNegativeBlue) !important;
-  border-color: var(--photoNegativeBlue) !important;
+  background-color: var(--tpYellow) !important;
+  border-color: var(--tpYellow) !important;
 }
 
 .bigContainer {
   border-top: unset;
   padding: unset;
 }
-
 
 @keyframes glitch1 {
   0% {

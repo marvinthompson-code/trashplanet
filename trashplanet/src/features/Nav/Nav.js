@@ -3,20 +3,21 @@ import { NavLink, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import shoppingCart from "../../css/icons/shopping-cart.png";
 import loginIcon from "../../css/icons/user.png";
-import "../../css/Nav.css"
-
+import "../../css/Nav.css";
+import yellerLogo from "../../css/images/trashplanetYeller.png"
 const Nav = () => {
   const history = useHistory();
 
   const showButtons = () => {
     // maybe when logged in, it can display a custom greeting, a profile with order history?
     // if there is a user, change the icon to reflect the message and link to profile instead
-  }
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <NavLink className="navbar-brand brandTitle" exact to="/">
-        TRASHPLXNET
+        {/* TRASHPLXNET */}
+        <img  src={yellerLogo} alt={"Trashplanet Logo"} className={"tpLogo"}/>
       </NavLink>
       <button
         className="navbar-toggler"
@@ -55,7 +56,11 @@ const Nav = () => {
               <NavLink className="dropdown-item navLink" exact to="/shop">
                 CLOTHING
               </NavLink>
-              <NavLink className="dropdown-item navLink" exact to="/accessories">
+              <NavLink
+                className="dropdown-item navLink"
+                exact
+                to="/accessories"
+              >
                 ACCESSORIES
               </NavLink>
               <NavLink className="dropdown-item navLink" exact to="/misc">
