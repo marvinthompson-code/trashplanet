@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setFeedModalImg } from "../Shop/feedModalSlice";
+import yellerLogo from "../../css/images/trashplanetYeller.png"
 // css
 import "../../css/Home.css";
 
@@ -110,6 +111,11 @@ const Home = () => {
       </div>
       <br></br>
       <div className="jumbotron jumboHome feedJumbo">
+        <div className="text-center">
+          <img src={yellerLogo} className={"feedLogo"}/>
+          
+        </div>
+        <br></br>
         <h1 className="display-4 text-center bannerTitle shopTheFeed">
           SHOP THE FEED
         </h1>

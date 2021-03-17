@@ -212,6 +212,11 @@
   padding: unset;
 }
 
+.feedLogo {
+  max-width: 200px;
+  max-height: 200px;
+}
+
 @keyframes glitch1 {
   0% {
     transform: none;

@@ -93,6 +93,10 @@ const Nav = () => {
           </img>
           </li> */}
         </ul>
+
+        <div className="shoppingCartDiv my-2 my-lg-0 ">
+      <img  src={shoppingCart} alt="shoppingCart" className="cartIcon"/>
+    </div>
       </div>
     </nav>
   );

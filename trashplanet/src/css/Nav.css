@@ -89,3 +89,14 @@
 .dropdownParent {
   background-color: black;
 }
+
+.shoppingCartDiv {
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
+}
+.cartIcon {
+  max-height: 50px;
+  max-width: 50px;
+  filter: invert(1);
+}
