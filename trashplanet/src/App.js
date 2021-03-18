@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
-import React, { useEffect } from "react";
+import React, { useEffect, Component, useState } from "react";
+import { commerce } from "./lib/commerce";
 import "./App.css";
 import firebase from "./firebase";
 import { useSelector, useDispatch } from "react-redux";
@@ -20,6 +21,22 @@ import Misc from "./features/Misc/Misc";
 
 function App() {
   const dispatch = useDispatch();
+  const [products, setProducts] = useState([]);
+
+  /**
+   * Fetch products data from Chec and stores in the products data object.
+   * https://commercejs.com/docs/sdk/products
+   */
+
+  const fetchProducts = () => {
+    commerce.products.list().then((products) => {
+      setProducts(products.data) 
+    }).catch((error) => {
+      console.log('There was an error fetching the products', error);
+    });
+  }
+  useEffect(() => {}, []);
+
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
       dispatch(updateUser(user));
