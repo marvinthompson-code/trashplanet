@@ -1,11 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle";
-import React, { useEffect, Component, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { commerce } from "./lib/commerce";
 import "./App.css";
 import firebase from "./firebase";
-import { useSelector, useDispatch } from "react-redux";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Route, Switch } from "react-router-dom";
 import { updateUser } from "./features/user/userSlice";
 
 // components
@@ -18,24 +18,29 @@ import AllItems from "./features/shopAll/AllItems";
 import Accessories from "./features/Accessories/Accessories";
 import Media from "./features/Media/Media";
 import Misc from "./features/Misc/Misc";
+import ProductList from "./features/ProductsList/ProductsList";
 
 function App() {
   const dispatch = useDispatch();
   const [products, setProducts] = useState([]);
-
   /**
    * Fetch products data from Chec and stores in the products data object.
    * https://commercejs.com/docs/sdk/products
    */
 
   const fetchProducts = () => {
-    commerce.products.list().then((products) => {
-      setProducts(products.data) 
-    }).catch((error) => {
-      console.log('There was an error fetching the products', error);
-    });
-  }
-  useEffect(() => {}, []);
+    commerce.products
+      .list()
+      .then((products) => {
+        setProducts(products.data);
+      })
+      .catch((error) => {
+        console.log("There was an error fetching the products", error);
+      });
+  };
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
@@ -53,6 +58,7 @@ function App() {
         </Route>
         <Route exact path="/shop">
           <Clothing />
+          <ProductList products={products} />
         </Route>
         <Route exact path="/shopAll">
           <AllItems />

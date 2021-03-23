@@ -1,41 +1,14 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { NavLink } from "react-router-dom";
-import { apiURL } from "../../util/apiURL";
+import React from "react";
 // css
 import "../../css/Clothing.css";
 
 const Clothing = () => {
-  const API = apiURL();
-  const [clothes, setClothes] = useState([]);
-
-  // make an axios call for all items in the clothing category
-  // iterate through the items
-  // forEach item, create a card with an image, name, price
-  // on click, history.push to individual page for that item
-
-  useEffect(() => {
-    const fetchClothing = async (category) => {
-      let res = await axios.get(`${API}/items/${category}`);
-    };
-  }, []);
-
   return (
     <div className="bigContainer">
-      
       <div class="jumbotron jumbotron-fluid text-center clothingJumbo">
         <div class="container">
-        <h1 class="display-4 bannerTitle">All Clothing</h1>
+          <h1 class="display-4 bannerTitle">All Clothing</h1>
           <p class="lead">
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent.
-          </p>
-        </div>
-      </div>
-      <div class="jumbotron jumbotron-fluid text-center">
-        <div class="container">
-          
-          <p class="lead bannerText">
             This is a modified jumbotron that occupies the entire horizontal
             space of its parent.
           </p>

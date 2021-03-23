@@ -1,0 +1,13 @@
+.product__image {
+    width: 100%; /* You can set the dimensions to whatever you want */
+    height: 300px;
+    object-fit: cover;
+}
+
+.itemCard {
+    border-radius: 0.3rem !important;
+    border: 1px solid black !important;
+    transition: 2s;
+    padding: 5px;
+    background: unset;
+}
