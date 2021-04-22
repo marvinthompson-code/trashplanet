@@ -1,23 +1,21 @@
 import React from "react";
 import { NavLink, useHistory } from "react-router-dom";
-import { useSelector } from "react-redux";
 import shoppingCart from "../../css/icons/shopping-cart.png";
-import loginIcon from "../../css/icons/user.png";
 import "../../css/Nav.css";
-import yellerLogo from "../../css/images/trashplanetYeller.png"
+import yellerLogo from "../../css/images/trashplanetYeller.png";
 const Nav = () => {
   const history = useHistory();
 
-  const showButtons = () => {
-    // maybe when logged in, it can display a custom greeting, a profile with order history?
-    // if there is a user, change the icon to reflect the message and link to profile instead
-  };
+  // const showButtons = () => {
+  //   // maybe when logged in, it can display a custom greeting, a profile with order history?
+  //   // if there is a user, change the icon to reflect the message and link to profile instead
+  // };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <NavLink className="navbar-brand brandTitle" exact to="/">
         {/* TRASHPLXNET */}
-        <img  src={yellerLogo} alt={"Trashplanet Logo"} className={"tpLogo"}/>
+        <img src={yellerLogo} alt={"Trashplanet Logo"} className={"tpLogo"} />
       </NavLink>
       <button
         className="navbar-toggler"
@@ -95,8 +93,13 @@ const Nav = () => {
         </ul>
 
         <div className="shoppingCartDiv my-2 my-lg-0 ">
-      <img  src={shoppingCart} alt="shoppingCart" className="cartIcon"/>
-    </div>
+          <img
+            src={shoppingCart}
+            alt="shoppingCart"
+            className="cartIcon"
+            onClick={() => history.push("/cart")}
+          />
+        </div>
       </div>
     </nav>
   );

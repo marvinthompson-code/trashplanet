@@ -10,11 +10,15 @@ const ItemPage = () => {
   // we need size variant functionality
   // make a dropdown for size
   // we need a handleClick to add to cart
+
+  // local state variables
   const [currentProduct, setCurrentProduct] = useState(null);
   const [description, setDescription] = useState("");
   const [image, setImage] = useState(null);
   const [name, setName] = useState(null);
   const [price, setPrice] = useState(null);
+  const [quantity, setQuantity] = useState(0);
+  const [inventory, setInventory] = useState(null);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -27,6 +31,7 @@ const ItemPage = () => {
       try {
         const commerce = new Commerce(`${REACT_APP_CHEC_PUBLIC_KEY}`);
         commerce.products.retrieve(match.params.id).then((product) => {
+          debugger;
           const newDescription = product.description.replace(
             /(<([^>]+)>)/gi,
             ""
@@ -36,6 +41,7 @@ const ItemPage = () => {
           setCurrentProduct(product);
           setDescription(newDescription);
           setImage(product.media.source);
+          setInventory(product.inventory);
         });
       } catch (error) {
         console.log(error.message);
@@ -63,9 +69,37 @@ const ItemPage = () => {
                 <p className="priceProduct">{price}</p>
               </div>
               <div className="text-center">
-                <button className="btn btn-primary btn-lg bannerButton">
-                  Add to Cart
-                </button>
+                <div>
+                  {quantity ? (
+                    <>
+                      <label>quantity</label>
+                      <div>
+                        <input
+                          type="number"
+                          class="cn"
+                          min={quantity}
+                          step="1"
+                          max={inventory}
+                          onChange={(e) => setQuantity(e.target.value)}
+                          value={quantity}
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <h1 className="nameProduct">Sold Out</h1>
+                    </>
+                  )}
+                </div>
+
+                {quantity ? (
+                  <button
+                    className="btn btn-primary btn-lg bannerButton"
+                    onClick={handleClick}
+                  >
+                    Add to Cart
+                  </button>
+                ) : null}
               </div>
             </div>
           </div>

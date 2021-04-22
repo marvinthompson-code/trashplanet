@@ -20,6 +20,7 @@ import Media from "./features/Media/Media";
 import Misc from "./features/Misc/Misc";
 import ProductList from "./features/ProductsList/ProductsList";
 import ItemPage from "./features/ItemPage/itemPage";
+import Cart from "./features/Cart/Cart";
 
 function App() {
   const dispatch = useDispatch();
@@ -79,7 +80,9 @@ function App() {
         <Route exact path="/item/:id">
           <ItemPage />
         </Route>
-        <Route exact path="/cart"></Route>
+        <Route exact path="/cart">
+          <Cart />
+        </Route>
         <Route exact path="/checkout"></Route>
         <Route exact path="/thankYou"></Route>
       </Switch>
