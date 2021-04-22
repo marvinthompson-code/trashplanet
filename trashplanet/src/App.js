@@ -19,6 +19,7 @@ import Accessories from "./features/Accessories/Accessories";
 import Media from "./features/Media/Media";
 import Misc from "./features/Misc/Misc";
 import ProductList from "./features/ProductsList/ProductsList";
+import ItemPage from "./features/ItemPage/itemPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -74,6 +75,9 @@ function App() {
         </Route>
         <Route exact path="/about">
           <About />
+        </Route>
+        <Route exact path="/item/:id">
+          <ItemPage />
         </Route>
         <Route exact path="/cart"></Route>
         <Route exact path="/checkout"></Route>

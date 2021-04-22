@@ -1,0 +1,59 @@
+:root {
+  --darkBlack: #080708;
+  --darkGrey2: #0f0f0f;
+  --russianViolet: #0b012c;
+  --persianIndigo: #3a097d;
+  --russianLight: #47014b;
+  --midnight: #7a0167;
+  --indigoGReen: #70ffc4;
+  --photoNegativeBlue: #83cce8;
+  --negativeRed: #c64343;
+  --marioJudah: #92323c;
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+}
+
+.imageProduct {
+  width: 100%;
+  height: auto;
+  transition: 2s;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px black solid !important;
+}
+
+.imageProduct:hover {
+  filter: invert(1);
+}
+
+.productJumbo {
+  margin-top: 12%;
+  border-radius: 10px;
+
+  background-color: var(--darkBlack);
+}
+.productImageContainer {
+  margin: 5px;
+}
+
+.productLogo {
+  max-width: 200px;
+  max-height: 200px;
+}
+.nameProduct {
+  font-family: ProzaSemiMedium;
+  color: white;
+}
+
+.descriptionProduct {
+  font-family: ProzaReg;
+  color: white;
+}
+
+.priceProduct {
+  font-family: ProzaReg;
+  color: white;
+}

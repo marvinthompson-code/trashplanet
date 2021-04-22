@@ -1,10 +1,10 @@
+import "../../css/Home.css";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setFeedModalImg } from "../Shop/feedModalSlice";
 import yellerLogo from "../../css/images/trashplanetYeller.png"
 // css
-import "../../css/Home.css";
 
 // components
 import FeedModal from "../Shop/FeedModal";
