@@ -1,6 +1,4 @@
 # trashplanet
-Clothing website.
-
 Trashplanet is an E-Commerce Clothing website, where users can view current items, add to cart, and checkout by utilizing Commerce JS and Stripe. This project has a small backend, and primarily relies on CommerceJS functionality.
 ## Features
 
