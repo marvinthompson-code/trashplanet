@@ -22,11 +22,11 @@
   transition: 2s;
   border-radius: 10px;
   padding: 5px;
-  border: 1px black solid !important;
+  border: 1px #e1e002 solid !important;
 }
 
 .imageProduct:hover {
-  filter: invert(1);
+  border-color: white !important;
 }
 
 .productJumbo {
@@ -46,6 +46,7 @@
 .nameProduct {
   font-family: ProzaSemiMedium;
   color: white;
+  animation: glitch1 2.5s infinite;
 }
 
 .descriptionProduct {

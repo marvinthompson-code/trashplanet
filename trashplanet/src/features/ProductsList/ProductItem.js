@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import "../../css/ItemCard.css";
 
 const ProductItem = ({ product }) => {
-    debugger
   const newDescription = product.description.replace(/(<([^>]+)>)/gi, "");
   return (
     <div className="product__card card col-md-4 grid-item">

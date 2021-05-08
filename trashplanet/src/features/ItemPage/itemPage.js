@@ -2,7 +2,7 @@ import "../../css/ItemPage.css";
 import yellerLogo from "../../css/images/trashplanetYeller.png";
 import React, { useEffect, useState } from "react";
 import Commerce from "@chec/commerce.js";
-import { useRouteMatch } from "react-router-dom";
+import { useRouteMatch, NavLink } from "react-router-dom";
 const { REACT_APP_CHEC_PUBLIC_KEY } = process.env;
 
 const ItemPage = () => {
@@ -31,7 +31,6 @@ const ItemPage = () => {
       try {
         const commerce = new Commerce(`${REACT_APP_CHEC_PUBLIC_KEY}`);
         commerce.products.retrieve(match.params.id).then((product) => {
-          debugger;
           const newDescription = product.description.replace(
             /(<([^>]+)>)/gi,
             ""
@@ -51,7 +50,7 @@ const ItemPage = () => {
   }, [match.params.id]);
 
   return (
-    <div>
+    <>
       <div className="container">
         <div className="jumbotron jumbotron-fluid productJumbo">
           <div className="productNameContainer">
@@ -88,6 +87,15 @@ const ItemPage = () => {
                   ) : (
                     <>
                       <h1 className="nameProduct">Sold Out</h1>
+                      <br></br>
+                      <NavLink
+                        className="btn btn-primary btn-lg bannerButton"
+                        exact
+                        to="/shop"
+                        role="button"
+                      >
+                        Back to Clothing
+                      </NavLink>
                     </>
                   )}
                 </div>
@@ -109,7 +117,7 @@ const ItemPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
