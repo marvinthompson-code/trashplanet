@@ -58,3 +58,11 @@
   font-family: ProzaReg;
   color: white;
 }
+
+
+@media screen and (max-width: 600px) {
+  .productJumbo {
+    width: 100%;
+    margin-top: 29%;
+  }
+}

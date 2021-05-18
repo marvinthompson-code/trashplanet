@@ -52,7 +52,7 @@ const Home = () => {
       <br></br>
       <div className="container">
         <div className="card-deck row">
-          <div className="cardContainer col">
+          <div className="cardContainer col-md-6">
             <div className="card">
               <img
                 className="card-img-top cardTop d-block img-fluid img-responsive "
@@ -80,7 +80,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="cardContainer col">
+          <div className="cardContainer col-md-6">
             <div className="card">
               <img
                 className="card-img-top cardTop d-block img-fluid img-responsive "

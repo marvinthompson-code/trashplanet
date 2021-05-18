@@ -20,9 +20,20 @@ const ItemPage = () => {
   const [quantity, setQuantity] = useState(0);
   const [inventory, setInventory] = useState(null);
 
+  // add to cart function
+  const addToCart = (itemId, quantity) => {
+    const commerce = new Commerce(`${REACT_APP_CHEC_PUBLIC_KEY}`);
+    commerce.cart
+      .add(itemId, quantity)
+      //do stuff with response
+      .then((response) => console.log(response));
+  };
+
   const handleClick = (e) => {
     e.preventDefault();
     // add to cart
+    addToCart(match.params.id, quantity);
+    debugger
     // notification card comes up with message
   };
 
@@ -57,12 +68,12 @@ const ItemPage = () => {
             <h1 className="nameProduct text-center">{name}</h1>
           </div>
           <div className="row">
-            <div className="col productImageContainer">
+            <div className="col-md-6 productImageContainer">
               <div className="productImage">
                 <img src={image} alt={"Item"} className="imageProduct" />
               </div>
             </div>
-            <div className="col productImageContainer">
+            <div className="col-md-6 productImageContainer">
               <div className="descriptionDiv text-center">
                 <p className="descriptionProduct">{description}</p>
                 <p className="priceProduct">{price}</p>
