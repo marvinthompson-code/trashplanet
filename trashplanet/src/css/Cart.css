@@ -1,0 +1,38 @@
+:root {
+  --darkBlack: #080708;
+  --darkGrey2: #0f0f0f;
+  --russianViolet: #0b012c;
+  --persianIndigo: #3a097d;
+  --russianLight: #47014b;
+  --midnight: #7a0167;
+  --indigoGReen: #70ffc4;
+  --photoNegativeBlue: #83cce8;
+  --negativeRed: #c64343;
+  --marioJudah: #92323c;
+  --trashYellow: #e1e002;
+}
+
+@font-face {
+  src: url("../css/fonts/ProzaLibre-Regular.ttf");
+  font-family: ProzaReg;
+}
+
+.cartJumbo {
+  margin-top: 12%;
+  border-radius: 10px;
+  background-color: var(--darkBlack);
+}
+
+.divider {
+  background-color: var(--trashYellow) !important;
+}
+
+.cartStatus {
+  font-family: ProzaReg;
+  color: white;
+}
+
+.cartDescription {
+  font-family: ProzaReg;
+  color: white;
+}

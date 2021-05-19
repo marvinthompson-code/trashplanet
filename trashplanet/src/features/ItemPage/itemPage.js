@@ -33,7 +33,7 @@ const ItemPage = () => {
     e.preventDefault();
     // add to cart
     addToCart(match.params.id, quantity);
-    debugger
+    debugger;
     // notification card comes up with message
   };
 

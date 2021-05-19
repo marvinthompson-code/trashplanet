@@ -1,4 +1,6 @@
+import "../../css/Cart.css";
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import Commerce from "@chec/commerce.js";
 const { REACT_APP_CHEC_PUBLIC_KEY } = process.env;
 
@@ -53,6 +55,8 @@ const Cart = () => {
     });
   };
 
+  // create a variable, iterate through the cart items and create card components for each card
+
   useEffect(() => {
     const retriveCart = () => {
       try {
@@ -78,9 +82,42 @@ const Cart = () => {
     };
     retriveCart();
   }, []);
-  return (<div>
+  return (
+    <div className="cartParent container">
+      <div className="jumbotron cartJumbo text-center">
+        <h1 className="display-4 nameProduct">Cart</h1>
 
-  </div>);
+        <p className="lead cartDescription">
+          View current items, remove items, or clear the cart.
+        </p>
+        <hr className="my-4 divider" />
+        {!totalItems ? (
+          <p className="lead cartStatus">Your cart is empty</p>
+        ) : (
+          <p className="lead cartStatus">Hello, world!</p>
+        )}
+        <hr className="my-4 divider" />
+        <p className="lead">
+          <NavLink
+            className="btn btn-primary btn-lg bannerButton"
+            role="button"
+            to="/checkout"
+          >
+            Proceed to Checkout
+          </NavLink>
+        </p>
+        <p className="lead">
+          <NavLink
+            className="btn btn-primary btn-lg bannerButton"
+            role="button"
+            to="/"
+          >
+            Back to Home
+          </NavLink>
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default Cart;
