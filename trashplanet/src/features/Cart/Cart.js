@@ -1,4 +1,5 @@
 import "../../css/Cart.css";
+import CartItemCard from "./CartItemCard";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Commerce from "@chec/commerce.js";
@@ -56,6 +57,10 @@ const Cart = () => {
   };
 
   // create a variable, iterate through the cart items and create card components for each card
+  let cartItemCards = cartItems.map((item) => {
+    // content cart components
+    <CartItemCard item={item} key={item.id} />;
+  });
 
   useEffect(() => {
     const retriveCart = () => {
@@ -94,8 +99,9 @@ const Cart = () => {
         {!totalItems ? (
           <p className="lead cartStatus">Your cart is empty</p>
         ) : (
-          <p className="lead cartStatus">Hello, world!</p>
+          <ul className="cartItemList">{cartItemCards}</ul>
         )}
+
         <hr className="my-4 divider" />
         <p className="lead">
           <NavLink

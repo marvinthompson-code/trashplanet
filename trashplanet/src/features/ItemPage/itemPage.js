@@ -17,7 +17,7 @@ const ItemPage = () => {
   const [image, setImage] = useState(null);
   const [name, setName] = useState(null);
   const [price, setPrice] = useState(null);
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState("0");
   const [inventory, setInventory] = useState(null);
 
   // add to cart function
@@ -29,8 +29,9 @@ const ItemPage = () => {
       .then((response) => console.log(response));
   };
 
-  const handleClick = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    debugger
     // add to cart
     addToCart(match.params.id, quantity);
     debugger;
@@ -46,12 +47,13 @@ const ItemPage = () => {
             /(<([^>]+)>)/gi,
             ""
           );
+          let { available } = product.inventory;
           setName(product.name);
           setPrice(product.price.formatted_with_symbol);
           setCurrentProduct(product);
           setDescription(newDescription);
           setImage(product.media.source);
-          setInventory(product.inventory);
+          setInventory(available);
         });
       } catch (error) {
         console.log(error.message);
@@ -67,33 +69,56 @@ const ItemPage = () => {
           <div className="productNameContainer">
             <h1 className="nameProduct text-center">{name}</h1>
           </div>
-          <div className="row">
-            <div className="col-md-6 productImageContainer">
+
+          <div className="row productDivParent">
+            <div className="col-sm-6 productImageContainer">
               <div className="productImage">
                 <img src={image} alt={"Item"} className="imageProduct" />
               </div>
             </div>
-            <div className="col-md-6 productImageContainer">
+
+            <div className="col-sm-6 productImageContainer">
               <div className="descriptionDiv text-center">
                 <p className="descriptionProduct">{description}</p>
                 <p className="priceProduct">{price}</p>
               </div>
               <div className="text-center">
                 <div>
-                  {quantity ? (
+                  {inventory ? (
                     <>
-                      <label>quantity</label>
-                      <div>
-                        <input
-                          type="number"
-                          class="cn"
-                          min={quantity}
-                          step="1"
-                          max={inventory}
-                          onChange={(e) => setQuantity(e.target.value)}
-                          value={quantity}
-                        />
-                      </div>
+                      <form onSubmit={handleSubmit}>
+                        <div className="container">
+                          <div className="row">
+                            <div className="col">
+                              <label className="descriptionProduct">
+                                quantity
+                              </label>
+                              <input
+                                type="number"
+                                name="quantity"
+                                min="1"
+                                max={inventory.toString()}
+                                step="1"
+                                value={quantity.toString()}
+                                class="cn "
+                                onChange={(e) => {
+                                  setQuantity(Number(e.target.value));
+                                  // console.log(Number(quantity))
+                                }}
+                              />
+                            </div>
+
+                            <div className="col">
+                              <button
+                                className="btn btn-primary btn-lg bannerButton"
+                                type="submit"
+                              >
+                                Add to Cart
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
                     </>
                   ) : (
                     <>
@@ -110,18 +135,10 @@ const ItemPage = () => {
                     </>
                   )}
                 </div>
-
-                {quantity ? (
-                  <button
-                    className="btn btn-primary btn-lg bannerButton"
-                    onClick={handleClick}
-                  >
-                    Add to Cart
-                  </button>
-                ) : null}
               </div>
             </div>
           </div>
+
           <br></br>
           <div className="logoContainer text-center">
             <img src={yellerLogo} className={"productLogo"} />
