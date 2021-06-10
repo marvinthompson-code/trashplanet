@@ -21,6 +21,7 @@ import Misc from "./features/Misc/Misc";
 import ProductList from "./features/ProductsList/ProductsList";
 import ItemPage from "./features/ItemPage/itemPage";
 import Cart from "./features/Cart/Cart";
+import Contact from "./features/Contact/Contact";
 
 function App() {
   const dispatch = useDispatch();
@@ -82,6 +83,9 @@ function App() {
         </Route>
         <Route exact path="/cart">
           <Cart />
+        </Route>
+        <Route exact path="/contact">
+          <Contact />
         </Route>
         <Route exact path="/checkout"></Route>
         <Route exact path="/thankYou"></Route>

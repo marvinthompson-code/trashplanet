@@ -1,0 +1,10 @@
+.contactParent {
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .contactParent {
+        margin-top: 35%;
+    }
+  }

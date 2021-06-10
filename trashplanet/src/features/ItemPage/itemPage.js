@@ -53,6 +53,7 @@ const ItemPage = () => {
           setCurrentProduct(product);
           setDescription(newDescription);
           setImage(product.media.source);
+          debugger
           setInventory(available);
         });
       } catch (error) {
