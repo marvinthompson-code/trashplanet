@@ -106,7 +106,7 @@
 }
 
 .jumboCollection {
-  background-image: url("../css/images/nikelab_acg.jpg"),
+  background-image: url("../css/images/misc/nikelab_acg.jpg"),
     linear-gradient(
       to bottom,
       rgba(245, 246, 252, 0.52),
@@ -130,7 +130,7 @@
 @media screen and (max-width: 600px) {
   .jumboCollection {
     width: 100%;
-    margin-top: 29%;
+    margin-top: 30%;
   }
 
   .brandTitle {
@@ -158,12 +158,24 @@
 
 @media screen and (min-width: 375px) and (max-width: 700px) {
   .jumboCollection {
+    margin-top: 22.5%;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .jumboCollection {
     margin-top: 25.5%;
   }
 }
 
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .jumboCollection {
+    margin-top: 12.5%;
+  }
+}
+
 .jumbo2 {
-  background-image: url("../css/images/tech1.jpg"),
+  background-image: url("../css/images/misc/tech1.jpg"),
     linear-gradient(
       to bottom,
       rgba(245, 246, 252, 0.52),

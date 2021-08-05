@@ -6,22 +6,24 @@ import "./App.css";
 import firebase from "./firebase";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
-import { updateUser } from "./features/user/userSlice";
+import { updateUser } from "./features/Slices/user/userSlice";
 
-// components
-import Footer from "./features/Footer/Footer";
-import Nav from "./features/Nav/Nav";
-import Home from "./features/Home/Home";
-import About from "./features/About/About";
-import Clothing from "./features/Shop/Clothing";
-import AllItems from "./features/shopAll/AllItems";
-import Accessories from "./features/Accessories/Accessories";
-import Media from "./features/Media/Media";
-import Misc from "./features/Misc/Misc";
-import ProductList from "./features/ProductsList/ProductsList";
-import ItemPage from "./features/ItemPage/itemPage";
-import Cart from "./features/Cart/Cart";
-import Contact from "./features/Contact/Contact";
+// Pages
+import Home from "./features/Pages/Home/Home";
+import About from "./features/Pages/About/About";
+import Clothing from "./features/Pages/Shop/Clothing";
+import ProductList from "./features/Pages/ProductsList/ProductsList";
+import ItemPage from "./features/Pages/ItemPage/itemPage";
+import Media from "./features/Pages/Media/Media";
+import Misc from "./features/Pages/Misc/Misc";
+import Cart from "./features/Pages/Cart/Cart";
+import Contact from "./features/Pages/Contact/Contact";
+import AllItems from "./features/Pages/shopAll/AllItems";
+import Accessories from "./features/Pages/Accessories/Accessories";
+
+// Components
+import Footer from "./features/Global/Footer/Footer";
+import Nav from "./features/Global/Nav/Nav";
 
 function App() {
   const dispatch = useDispatch();

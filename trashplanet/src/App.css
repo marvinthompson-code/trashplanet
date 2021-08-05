@@ -16,16 +16,16 @@ body {
 
 .App {
   /* background-color: white; */
-  background: repeating-linear-gradient(
+  /* background: repeating-linear-gradient(
     45deg,
     var(--darkGrey2),
     var(--darkGrey2) 10px,
     var(--darkBlack) 10px,
     var(--darkBlack) 20px
-  );
-  /* background-image: url("../../trashplanet/src/css/images/pexels-bruno-thethe-1910236.jpg"); */
+  ); */
+  background-image: url("./css/images/misc/tv2.gif");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
   -moz-background-size: cover;
   -o-background-size: cover;

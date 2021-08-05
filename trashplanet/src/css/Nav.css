@@ -100,3 +100,7 @@
   max-width: 50px;
   filter: invert(1);
 }
+
+.navbar-toggler-icon {
+  color: white !important;
+}
