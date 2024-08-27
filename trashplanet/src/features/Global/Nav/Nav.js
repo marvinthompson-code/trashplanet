@@ -1,10 +1,10 @@
 import React from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import shoppingCart from "../../../css/icons/shopping-cart.png";
 import "../../../css/Nav.css";
 import yellerLogo from "../../../css/images/misc/trashplanetYeller.png";
 const Nav = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <NavLink className="navbar-brand brandTitle" exact to="/">
@@ -90,7 +90,7 @@ const Nav = () => {
             src={shoppingCart}
             alt="shoppingCart"
             className="cartIcon"
-            onClick={() => history.push("/cart")}
+            onClick={() => navigate.push("/cart")}
           />
         </div>
       </div>

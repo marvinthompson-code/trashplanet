@@ -2,11 +2,11 @@ import "../../../css/ItemPage.css";
 import yellerLogo from "../../../css/images/misc/trashplanetYeller.png";
 import React, { useEffect, useState } from "react";
 import Commerce from "@chec/commerce.js";
-import { useRouteMatch, NavLink } from "react-router-dom";
+import { useMatch, NavLink } from "react-router-dom";
 const { REACT_APP_CHEC_PUBLIC_KEY } = process.env;
 
 const ItemPage = () => {
-  const match = useRouteMatch();
+  const match = useMatch();
   // we need size variant functionality
   // make a dropdown for size
   // we need a handleClick to add to cart

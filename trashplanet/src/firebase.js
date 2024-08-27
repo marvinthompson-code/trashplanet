@@ -1,5 +1,6 @@
-import app from "firebase";
-import "firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/storage"
 
 const {
   REACT_APP_APIKEY,
@@ -21,6 +22,10 @@ const config = {
   appId: REACT_APP_APPID,
 };
 
-app.initializeApp(config);
-const storage = app.storage();
-export { storage, app as default };
+const app = firebase.initializeApp(config);
+
+export const storage = app.storage().ref();
+export const auth = app.auth()
+// export { storage, app as default };
+
+export default app

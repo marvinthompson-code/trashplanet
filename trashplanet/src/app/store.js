@@ -12,5 +12,5 @@ export default configureStore({
     feedModalImg: feedModalReducer,
     product: productReducer
   },
-  middleware: [...getDefaultMiddleware(), logger]
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
 });

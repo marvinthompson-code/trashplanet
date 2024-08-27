@@ -5,7 +5,7 @@ import { commerce } from "./lib/commerce";
 import "./App.css";
 import firebase from "./firebase";
 import { useDispatch } from "react-redux";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { updateUser } from "./features/Slices/user/userSlice";
 
 // Pages
@@ -57,7 +57,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Switch>
+      <Routes>
         <Route exact path="/">
           <Home />
         </Route>
@@ -91,7 +91,7 @@ function App() {
         </Route>
         <Route exact path="/checkout"></Route>
         <Route exact path="/thankYou"></Route>
-      </Switch>
+      </Routes>
       <Footer />
     </div>
   );
