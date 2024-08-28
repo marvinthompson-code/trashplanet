@@ -15,10 +15,12 @@ import social10 from "../../../css/images/dummySocialFeed/social10.jpeg";
 import FeedModal from "../Shop/FeedModal";
 const SocialFeed = () => {
   const [currentModalImage, setCurrentModalImage] = useState("");
+  const [toggle, setToggle] = useState(false)
   // const dispatch = useDispatch();
 
   const handleClick = (e) => {
     setCurrentModalImage(e.target.src);
+    setToggle(!toggle)
   };
   return (
     <>
@@ -29,7 +31,7 @@ const SocialFeed = () => {
             alt="social"
             className="homeSocial"
             data-toggle="modal"
-            data-target="#exampleModalCenter"
+            data-target="feedModal"
             onClick={handleClick}
           />
         </div>

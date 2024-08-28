@@ -7,6 +7,7 @@ const FeedModal = ({ modalImage }) => {
     <div
       className="modal fade feedModal"
       id="exampleModalCenter"
+      data-id="exampleModalCenter"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalCenterTitle"
