@@ -11,8 +11,7 @@ import { updateUser } from "./features/Slices/user/userSlice";
 // Pages
 import Home from "./features/Pages/Home/Home";
 import About from "./features/Pages/About/About";
-import Clothing from "./features/Pages/Shop/Clothing";
-import ProductList from "./features/Pages/ProductsList/ProductsList";
+import ShopPage from "./features/Pages/Shop/ShopPage";
 import ItemPage from "./features/Pages/ItemPage/itemPage";
 import Media from "./features/Pages/Media/Media";
 import Misc from "./features/Pages/Misc/Misc";
@@ -58,37 +57,26 @@ function App() {
     <div className="App">
       <Nav />
       <Routes>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/shop">
-          <Clothing />
-          <ProductList products={products} />
-        </Route>
-        <Route exact path="/shopAll">
-          <AllItems />
-        </Route>
-        <Route exact path="/accessories">
-          <Accessories />
-        </Route>
-        <Route exact path="/misc">
-          <Misc />
-        </Route>
-        <Route exact path="/media">
-          <Media />
-        </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route exact path="/item/:id">
-          <ItemPage />
-        </Route>
-        <Route exact path="/cart">
-          <Cart />
-        </Route>
-        <Route exact path="/contact">
-          <Contact />
-        </Route>
+        <Route exact path="/" element={<Home />} />
+
+        <Route exact path="/shop" element={<ShopPage products={products} />} />
+
+        <Route exact path="/shopAll" element={<AllItems />} />
+
+        <Route exact path="/accessories" element={<Accessories />} />
+
+        <Route exact path="/misc" element={<Misc />} />
+
+        <Route exact path="/media" element={<Media />} />
+
+        <Route exact path="/about" element={<About />} />
+
+        <Route exact path="/item/:id" element={<ItemPage />} />
+
+        <Route exact path="/cart" element={<Cart />} />
+
+        <Route exact path="/contact" element={<Contact />} />
+
         <Route exact path="/checkout"></Route>
         <Route exact path="/thankYou"></Route>
       </Routes>

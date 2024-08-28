@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { NavLink, useNavigate } from "react-router-dom";
-import { apiURL } from "../../../util/apiURL";
+import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+// import { apiURL } from "../../../util/apiURL";
 
 const AllItems = () => {
-  const navigate = useNavigate();
-  const API = apiURL();
+  // const navigate = useNavigate();
+  // const API = apiURL();
   // const [allItems, setAllItems] = useState([]);
 
   useEffect(() => {

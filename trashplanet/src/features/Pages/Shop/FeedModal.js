@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useeSelector } from "react-redux";
+import React from "react";
+
 // css
 import "../../../css/FeedModal.css";
 const FeedModal = ({ modalImage }) => {
@@ -18,13 +18,12 @@ const FeedModal = ({ modalImage }) => {
             <h5
               className="modal-title"
               id="exampleModalLongTitle"
-              className="shopCardTitle"
             >
               SHOP THE FEED
             </h5>
-            {/* <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button> */}
+        </button>
           </div>
           <div className="modal-body">
             <div className="row">

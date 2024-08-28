@@ -1,14 +1,8 @@
 import React from "react";
 
 const CartItemCard = ({ item }) => {
-    debugger
-  return 
-  (
-  <li>
-
-
-  </li>
-  );
+  return;
+  <></>;
 };
 
 export default CartItemCard;
